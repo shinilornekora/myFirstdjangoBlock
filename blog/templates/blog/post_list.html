@@ -1,31 +1,35 @@
+{% load static %}
 <html>
-    <head>
-        <title>Andrew's blog'</title>
-    </head>
-    <body>
-        <div>
-            <h1>Why bananas are kinda rare in those days?</h1>
-            <h2>Why bananas are kinda rare in those days?</h2>
-            <h3>Why bananas are kinda rare in those days?</h3>
-            <h4>Why bananas are kinda rare in those days?</h4>
-            <h5>Why bananas are kinda rare in those days?</h5>
-            <h6>Why bananas are kinda rare in those days?</h6>
-        </div>
-        <div>
-            <p>Now you can see me quite in better mood.</p>
-            <em>And also it means that i have acknowledged some scripts</em><p></p>
-        </div>
-        
-        
-            <strong>Oh yes and site works too. <a href="http://127.0.0.1:8000">Adress</a></strong>
-        <p>{{posts}}</p>
-        {% for post in posts%}
-        <div>
-            <p>published: {{post.published_date}}</p>
-            <h1><a href="">{{post.title}}</a></h1>
-            <p>{{post.text|linebreaksbr}}</p>
-        </div>
-        {% endfor %}
-        
-    </body>
+<head>
+    <title>Andrew's blog'</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div>
+        <h1>Why bananas are kinda rare in those days?</h1>
+        <h2>Why bananas are kinda rare in those days?</h2>
+        <h3>Why bananas are kinda rare in those days?</h3>
+        <h4>Why bananas are kinda rare in those days?</h4>
+        <h5>Why bananas are kinda rare in those days?</h5>
+        <h6>Why bananas are kinda rare in those days?</h6>
+    </div>
+    <div>
+        <p>Now you can see me quite in better mood.</p>
+        <em>And also it means that i have acknowledged some scripts</em><p></p>
+    </div>
+
+
+    <strong>Oh yes and site works too. <a href="http://127.0.0.1:8000">Adress</a></strong>
+    <p>{{posts}}</p>
+    {% for post in posts%}
+    <div>
+        <p>published: {{post.published_date}}</p>
+        <h1><a href="">{{post.title}}</a></h1>
+        <p>{{post.text|linebreaksbr}}</p>
+    </div>
+    {% endfor %}
+
+</body>
 </html>
