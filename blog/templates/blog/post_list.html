@@ -16,8 +16,16 @@
             <em>And also it means that i have acknowledged some scripts</em><p></p>
         </div>
         
-        <div>
+        
             <strong>Oh yes and site works too. <a href="http://127.0.0.1:8000">Adress</a></strong>
+        <p>{{posts}}</p>
+        {% for post in posts%}
+        <div>
+            <p>published: {{post.published_date}}</p>
+            <h1><a href="">{{post.title}}</a></h1>
+            <p>{{post.text|linebreaksbr}}</p>
         </div>
+        {% endfor %}
+        
     </body>
 </html>
